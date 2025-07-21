@@ -1,0 +1,91 @@
+/* Reset sederhana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 450px;
+    animation: fadeInScale 1.2s ease forwards;
+}
+
+.message {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ff6f91;
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+.name {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ff4081;
+    margin-top: 0.3rem;
+}
+
+.wish {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+    animation: slideUpFade 2s ease forwards 1s;
+}
+
+/* Animasi */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow:
+          0 0 5px #ff6f91,
+          0 0 10px #ff6f91,
+          0 0 20px #ff6f91,
+          0 0 40px #ff4081;
+        color: #ff6f91;
+    }
+    50% {
+        text-shadow:
+          0 0 10px #ff4081,
+          0 0 15px #ff4081,
+          0 0 25px #ff6f91,
+          0 0 50px #ff6f91;
+        color: #ff4081;
+    }
+}
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
